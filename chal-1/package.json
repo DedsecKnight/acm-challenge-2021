@@ -1,0 +1,24 @@
+{
+  "name": "chal-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js --watch src/**/*/*.js --watch src/*.js --watch index.js"
+  },
+  "nodemon": {
+    "watch": "**/*/*.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "mongoose": "^6.0.5",
+    "nodemon": "^2.0.12",
+    "uuidv4": "^6.2.12"
+  }
+}
