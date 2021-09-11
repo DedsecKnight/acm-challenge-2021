@@ -2,7 +2,8 @@ This is my attempts of ACM UTD's Development Challenges
 <br> <br>
 Challenges that I attempted:
 
--   [Challenge 0](chal-0)
--   [Challenge 1](chal-1)
--   [Challenge 2](chal-2)
--   [Challenge 4](chal-4)
+-   Old Challenges
+    -   [Challenge 0](old_challenges/chal-0)
+    -   [Challenge 1](old_challenges/chal-1)
+    -   [Challenge 2](old_challenges/chal-2)
+    -   [Challenge 4](old_challenges/chal-4)
