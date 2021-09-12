@@ -1,4 +1,4 @@
-# Awesome Project Build with TypeORM
+# Software Development - Backend Challenge A
 
 Steps to run this project:
 
