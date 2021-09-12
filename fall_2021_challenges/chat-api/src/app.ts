@@ -10,10 +10,6 @@ import { NotFoundError } from "./errors/not-found";
 const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.send("Hello there");
-});
-
 app.post(
     "/send_message",
     [
