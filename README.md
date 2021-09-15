@@ -1,5 +1,7 @@
+# ACM Development Challenges
+
 This is my attempts of ACM UTD's Development Challenges
-<br> <br>
+
 Challenges that I attempted:
 
 -   Old Challenges
