@@ -9,3 +9,4 @@ Challenges that I attempted:
     -   [Challenge 4](old_challenges/chal-4)
 -   Fall 2021 Challenges
     -   [Chat API Challenge](fall_2021_challenges/chat-api)
+    -   [RSVP API Challenge](fall_2021_challenges/rsvp-api)
