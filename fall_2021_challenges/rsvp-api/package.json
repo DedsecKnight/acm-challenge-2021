@@ -1,0 +1,25 @@
+{
+    "name": "rsvp-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-session": "^1.4.0",
+        "dayjs": "^1.10.7",
+        "express": "^4.17.1",
+        "express-validator": "^6.12.1",
+        "googleapis": "^39.2.0",
+        "mongoose": "^6.0.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.12"
+    }
+}
