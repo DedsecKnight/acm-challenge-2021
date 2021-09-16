@@ -2,14 +2,20 @@ const { app } = require("./src/app");
 const mongoose = require("mongoose");
 const { oAuth2Client } = require("./src/google/auth");
 
-const bootstrap = async () => {
+const checkEnvironmentVariable = () => {
     if (!process.env.CLIENT_ID) {
         console.error("CLIENT_ID not found");
+        process.exit(1);
+    } else if (process.env.CLIENT_ID === "YOUR_GOOGLE_CLIENT_ID") {
+        console.error("CLIENT_ID is not initialized");
         process.exit(1);
     }
 
     if (!process.env.CLIENT_SECRET) {
         console.error("CLIENT_SECRET not found");
+        process.exit(1);
+    } else if (process.env.CLIENT_SECRET === "YOUR_GOOGLE_CLIENT_SECRET") {
+        console.error("CLIENT_SECRET is not initialized");
         process.exit(1);
     }
 
@@ -17,6 +23,10 @@ const bootstrap = async () => {
         console.error("REDIRECT_URI not found");
         process.exit(1);
     }
+};
+
+const bootstrap = async () => {
+    checkEnvironmentVariable();
 
     process.env.AUTH_URL = oAuth2Client.generateAuthUrl({
         access_type: "offline",
