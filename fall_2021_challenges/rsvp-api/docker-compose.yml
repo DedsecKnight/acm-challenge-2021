@@ -10,6 +10,13 @@ services:
             - "./:/usr/app"
         depends_on:
             - "db"
+        environment:
+            CHOKIDAR_USEPOLLING: "true"
+            CLIENT_ID: "YOUR_GOOGLE_CLIENT_ID"
+            CLIENT_SECRET: "YOUR_GOOGLE_CLIENT_SECRET"
+            JWT_SECRET: "YOUR_JWT_SECRET"
+            REDIRECT_URI: "http://localhost:3000/auth/redirect"
+
     db:
         image: mongo
         restart: always

@@ -22,11 +22,12 @@
 -   Under the section <i>Authorized JavaScript origins</i>, click Add URI and add the following URI: `http://localhost:3000`
 -   Under the section <i>Authorized redirect URIs</i>, click Add URI and add the following URI: `http://localhost:3000/auth/redirect`
 -   Click Create
--   Upon being provided a client ID and a client secret, replace the `YOUR_GOOGLE_CLIENT_ID` and `YOUR_GOOGLE_CLIENT_SECRET` in the `Dockerfile` file with the provided client ID and client secret
+-   Upon being provided a client ID and a client secret, replace the `YOUR_GOOGLE_CLIENT_ID` and `YOUR_GOOGLE_CLIENT_SECRET` in the `docker-compose.yml` file with the provided client ID and client secret
 
 ## Setup to run project
 
 -   Make sure that NodeJS, NPM, and Docker is installed on host machine
+-   Make sure to replace `YOUR_JWT_SECERT` in `docker-compose.yml` file with your own JWT secret key
 -   Run `npm install` to install all dependencies
 -   Run `docker-compose up --build` run start the project
 -   The API will be accessible at `http://localhost:3000`
