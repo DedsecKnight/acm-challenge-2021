@@ -19,6 +19,14 @@ const checkEnvironmentVariable = () => {
         process.exit(1);
     }
 
+    if (!process.env.JWT_SECRET) {
+        console.error("JWT_SECRET not found");
+        process.exit(1);
+    } else if (process.env.JWT_SECRET === "YOUR_JWT_SECRET") {
+        console.error("JWT_SECRET is not initialized");
+        process.exit(1);
+    }
+
     if (!process.env.REDIRECT_URI) {
         console.error("REDIRECT_URI not found");
         process.exit(1);
