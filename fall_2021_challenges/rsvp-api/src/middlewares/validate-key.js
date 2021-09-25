@@ -22,25 +22,6 @@ const validateApiKey = async (req, res, next) => {
                 ],
             });
         }
-
-        // oAuth2Client
-        //     .getToken(req.body.api_key)
-        //     .then(({ tokens }) => {
-        //         req.session = {
-        //             tokens: JSON.stringify(tokens),
-        //         };
-        //         next();
-        //     })
-        //     .catch((err) => {
-        //         return res.status(401).send({
-        //             statusCode: 401,
-        //             errors: [
-        //                 {
-        //                     msg: "Invalid credentials",
-        //                 },
-        //             ],
-        //         });
-        //     });
     }
 };
 
