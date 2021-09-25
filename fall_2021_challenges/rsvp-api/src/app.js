@@ -37,9 +37,9 @@ app.get("/auth/redirect", async (req, res) => {
             msg: "No code found",
         });
     }
-    const tokens = await oAuth2Client.getToken(code);
+    const { tokens } = await oAuth2Client.getToken(code);
     res.json({
-        api_key: jwt.sign(tokens.tokens, process.env.JWT_SECRET),
+        api_key: jwt.sign(tokens, process.env.JWT_SECRET),
     });
 });
 
