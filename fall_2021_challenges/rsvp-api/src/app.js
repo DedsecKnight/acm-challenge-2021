@@ -4,6 +4,7 @@ const { google } = require("googleapis");
 const { validateApiKey } = require("./middlewares/validate-key");
 const { validateRequest } = require("./middlewares/check-validation");
 const { body } = require("express-validator");
+const jwt = require("jsonwebtoken");
 
 const dayjs = require("dayjs");
 dayjs.extend(require("dayjs/plugin/utc"));
@@ -28,7 +29,7 @@ app.get("/signin", (req, res) => {
     res.redirect(process.env.AUTH_URL);
 });
 
-app.get("/auth/redirect", (req, res) => {
+app.get("/auth/redirect", async (req, res) => {
     const { code } = req.query;
     if (!code) {
         return res.send({
@@ -36,8 +37,9 @@ app.get("/auth/redirect", (req, res) => {
             msg: "No code found",
         });
     }
+    const tokens = await oAuth2Client.getToken(code);
     res.json({
-        api_key: code,
+        api_key: jwt.sign(tokens.tokens, process.env.JWT_SECRET),
     });
 });
 
